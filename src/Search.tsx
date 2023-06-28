@@ -6,12 +6,17 @@ interface SearchProps {
   }
   
   const Search = ({ value, onChange }: SearchProps) => {
-    const handleChange = (e: any) => {
-      onChange(e.target.value);
-    };
-  
-    return <input type="text" value={value} onChange={handleChange} />;
+    return (
+      <div>
+        <label htmlFor="search">Search: </label>
+        <input
+          id="search"
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      </div>
+    );
   };
   
-
-export default Search;
+  export default Search;
