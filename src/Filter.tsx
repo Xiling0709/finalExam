@@ -29,6 +29,7 @@ const Filter = () => {
   return (
     <div>
       <Search value={searchTerm} onChange={handleSearchChange} />
+      <hr />
       <List data={filteredData} query={searchTerm} />
     </div>
   );

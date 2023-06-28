@@ -36,9 +36,12 @@ const List = ({ data, query }: ListProps) => {
     <div>
       {data.map((item) => (
         <div key={item.id}>
-          <p>
-            {highlightSearchTerm(item.name + ' - ' + item.description, query)}
-          </p>
+         <div style={{ display: 'flex', width: '100%' }}>
+  <div style={{ width: '100px' }}>{highlightSearchTerm(item.name, query)}</div>
+  <div style={{ flex: 1 }}>{highlightSearchTerm(item.description, query)}</div>
+</div>
+
+
         </div>
       ))}
     </div>
